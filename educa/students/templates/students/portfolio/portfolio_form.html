@@ -3,10 +3,14 @@
 {% block title %}Portfolio Entry{% endblock %}
 
 {% block content %}
-  <h1>{{ form.instance.id|default:"New" }} Submission</h1>
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-  </form>
+  <div class="portfolio-form">
+    <h1>{{ form.instance.id|default:"New" }} Submission</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form-group">
+        {{ form.as_p }}
+      </div>
+      <button type="submit" class="button">Save</button>
+    </form>
+  </div>
 {% endblock %}

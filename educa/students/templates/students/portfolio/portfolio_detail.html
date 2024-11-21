@@ -3,12 +3,14 @@
 {% block title %}Portfolio Entry: {{ object.title }}{% endblock %}
 
 {% block content %}
-  <h1>{{ object.title }}</h1>
-  <p>{{ object.description }}</p>
-  {% if object.file %}
-    <a href="{{ object.file.url }}">Download File</a>
-  {% endif %}
-  <p>Course: {{ object.course.title }}</p>
-  <p>Created: {{ object.created_at }}</p>
-  <p>Updated: {{ object.updated_at }}</p>
+  <div class="portfolio-detail">
+    <h1>{{ object.title }}</h1>
+    <p>{{ object.description }}</p>
+    {% if object.file %}
+      <a href="{{ object.file.url }}" class="button">Download File</a>
+    {% endif %}
+    <p><strong>Course:</strong> {{ object.course.title }}</p>
+    <p><strong>Created:</strong> {{ object.created_at }}</p>
+    <p><strong>Updated:</strong> {{ object.updated_at }}</p>
+  </div>
 {% endblock %}

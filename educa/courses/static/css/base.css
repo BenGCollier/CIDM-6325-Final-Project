@@ -326,3 +326,150 @@ ul#course-modules li:hover {
     padding-left:0;
     padding-right:0;
 }
+
+/* For the Portfolio Detail Page */
+.portfolio-detail {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.portfolio-detail h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.portfolio-detail p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.portfolio-detail .button {
+    background: #4dcc43;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.portfolio-detail .button:hover {
+    background: #3fad37;
+}
+
+/* For the Portfolio List Page */
+.portfolio-list {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-list h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.portfolio-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-list ul li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.portfolio-list ul li a {
+    font-size: 18px;
+    color: #4dcc43;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.portfolio-list ul li a:hover {
+    text-decoration: underline;
+}
+
+.portfolio-list .button {
+    background: #4dcc43;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.portfolio-list .button:hover {
+    background: #3fad37;
+}
+
+/* For the Portfolio Form Page */
+.portfolio-form {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-form h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.portfolio-form .form-group {
+    margin-bottom: 20px;
+}
+
+.portfolio-form .form-group input,
+.portfolio-form .form-group select,
+.portfolio-form .form-group textarea {
+    width: 50%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.portfolio-form button[type="submit"] {
+    background: #4dcc43;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.portfolio-form button[type="submit"]:hover {
+    background: #3fad37;
+}
+
+/* Style for links similar to Course chat room */
+.view-submissions a {
+    font-size: 18px;
+    color: #4dcc43;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    background: none;
+    border-radius: 0;
+  }
+  
+  .view-submissions a:hover {
+    color: #3fad37;
+    border-bottom-color: #3fad37;
+    text-decoration: underline;
+    background: none;
+    border-radius: 0;
+  }
+  
+  
