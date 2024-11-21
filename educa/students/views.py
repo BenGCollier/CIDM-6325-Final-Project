@@ -1,13 +1,17 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import FormView
 from .forms import CourseEnrollForm
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from courses.models import Course
+from .models import PortfolioEntry
+from .forms import PortfolioEntryForm
+from django.shortcuts import get_object_or_404
+
 
 class StudentRegistrationView(CreateView):
     template_name = 'students/student/registration.html'
@@ -68,4 +72,54 @@ class StudentCourseDetailView(LoginRequiredMixin, DetailView):
         else:
             # get first module
             context['module'] = course.modules.all()[0]
+        return context
+    
+
+class PortfolioEntryCreateView(LoginRequiredMixin, CreateView):
+    model = PortfolioEntry
+    form_class = PortfolioEntryForm
+    template_name = 'students/portfolio/portfolio_form.html'
+
+    def form_valid(self, form):
+        form.instance.student = self.request.user
+        form.instance.course = get_object_or_404(Course, id=self.kwargs['course_id'])
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('student_portfolio_list', args=[self.kwargs['course_id']])
+
+
+class PortfolioEntryUpdateView(LoginRequiredMixin, UpdateView):
+    model = PortfolioEntry
+    form_class = PortfolioEntryForm
+    template_name = 'students/portfolio/portfolio_form.html'
+
+    def get_queryset(self):
+        return super().get_queryset().filter(student=self.request.user)
+
+    def get_success_url(self):
+        return reverse_lazy('student_portfolio_list', args=[self.object.course.id])
+
+
+class PortfolioEntryDetailView(LoginRequiredMixin, DetailView):
+    model = PortfolioEntry
+    template_name = 'students/portfolio/portfolio_detail.html'
+
+    def get_queryset(self):
+        return super().get_queryset().filter(student=self.request.user)
+
+
+class PortfolioEntryListView(LoginRequiredMixin, ListView):
+    model = PortfolioEntry
+    template_name = 'students/portfolio/portfolio_list.html'
+
+    def get_queryset(self):
+        return super().get_queryset().filter(
+            student=self.request.user,
+            course_id=self.kwargs['course_id']
+        )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['course'] = get_object_or_404(Course, id=self.kwargs['course_id'])
         return context
