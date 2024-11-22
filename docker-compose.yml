@@ -23,6 +23,8 @@ services:
     restart: always
     volumes:
       - .:/code
+    ports:
+      - "8000:8000"
     environment:
       - DJANGO_SETTINGS_MODULE=educa.settings.prod
       - POSTGRES_DB=postgres
@@ -40,3 +42,4 @@ services:
       - .:/code
     ports:
       - "80:80"
+      - "443:443"

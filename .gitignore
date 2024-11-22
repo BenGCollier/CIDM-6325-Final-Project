@@ -155,3 +155,4 @@ educa/static/rest_framework/js/jquery-3.7.1.min.js
 educa/static/rest_framework/js/load-ajax-form.js
 educa/static/rest_framework/js/prettify-min.js
 *.sock
+educa/ssl/educa.key
