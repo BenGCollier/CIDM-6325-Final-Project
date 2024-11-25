@@ -54,27 +54,8 @@ Advanced QuerySet operations                |           | x     |         |
 Django Signals                              |           |       | x       |
 Django Debug Toolbar                        | x         |       |         | 
 Redis                                       |           |       | x       | 
-***Chapter 8***                             |           |       |         |
-Pillow Image processing                     |           | x     |         |
-Django Sessions                             |           | x     |         |
-Custom context processors                   |           | x     |         |
-Django and RabbitMQ/Celery/Flower           |           |       |         | x
-***Chapter 9***                             |           |       |         |
-Stripe Payments                             |           |       | x       |
-Webhook Handlers                            |           |       | x       |
-CSV export                                  |           | x     |         |
-Add custom view to admin interface          |           | x     |         |
-PDF Generation                              |           |       |         | x
-Send PDFs via Email (external)              |           |       |         | x
 ***Chapter 10***                            |           |       |         |
 Recommender Engine with redis               |           |       |         | x
-***Chapter 11***                            |           |       |         | 
-Internationalization (I18N)                 |           |       | x       |
-Code translation                            |           |       | x       |
-Template translation                        |           |       | x       |
-Rosetta                                     |           |       | x       |
-Model translation with `django-parler`      |           |       | x       |
-Localization with `django-localflavor`      |           |       | x       |
 ***Chapter 12***                            |           |       |         |
 Fixtures                                    |           | x     |         |
 Model Inheritance                           | x         |       |         |
