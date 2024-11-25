@@ -9,7 +9,7 @@ Django Migrations                           | x         |       |         |
 Configuring models for the Django Admin     | x         |       |         |
 Queries and Querysets                       | x         |       |         |
 Function-Based Views and Templates          | x         |       |         |
-WOrking with URLs                           | x         |       |         |
+Working with URLs                           | x         |       |         |
 ***Chapter 2***                             |           |       |         |
 Canonical Urls for SEO                      | x         |       |         |
 Pagination                                  | x         |       |         |
