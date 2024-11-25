@@ -54,8 +54,6 @@ Advanced QuerySet operations                |           | x     |         |
 Django Signals                              |           |       | x       |
 Django Debug Toolbar                        | x         |       |         | 
 Redis                                       |           |       | x       | 
-***Chapter 10***                            |           |       |         |
-Recommender Engine with redis               |           |       |         | x
 ***Chapter 12***                            |           |       |         |
 Fixtures                                    |           | x     |         |
 Model Inheritance                           | x         |       |         |
