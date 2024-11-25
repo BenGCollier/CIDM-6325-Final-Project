@@ -14,12 +14,10 @@ Working with URLs                           | x         |       |         |
 Canonical Urls for SEO                      | x         |       |         |
 Pagination                                  | x         |       |         |
 Class-Based Views                           |           | x     |         |
-Sending email (internal in console)         | x         |       |         |
-Sending email (with 3rd party)              |           |       | x       |
 One-to-Many Model Relationships             | x         |       |         |
 ***Chapter 3***                             |           |       |         | 
 Django Taggit for Categorization            | x         |       |         |
-Aggregate model quiries                     | x         |       |         |
+Aggregate model queries                     | x         |       |         |
 Django Template Language                    | x         |       |         |
 Custom template tags                        |           | x     |         |
 Custom template filters                     |           | x     |         |
