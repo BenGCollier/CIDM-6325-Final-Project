@@ -9,19 +9,21 @@
 {% endblock %}
 
 {% block content %}
-  <h1>
+<div class="container mt-5">
+  <h1 class="mb-4">
     {% if object %}
       Edit content "{{ object.title }}"
     {% else %}
       Add new content
     {% endif %}
   </h1>
-  <div class="module">
-    <h2>Course info</h2>
+  <div class="card shadow-sm p-4">
+    <h2 class="card-title mb-3">Course Info</h2>
     <form action="" method="post" enctype="multipart/form-data">
-      {{ form.as_p }}
       {% csrf_token %}
-      <p><input type="submit" value="Save content"></p>
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary mt-3">Save Content</button>
     </form>
   </div>
+</div>
 {% endblock %}

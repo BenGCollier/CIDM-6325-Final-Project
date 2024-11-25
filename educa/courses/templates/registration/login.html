@@ -3,20 +3,22 @@
 {% block title %}Log-in{% endblock %}
 
 {% block content %}
-  <h1>Log-in</h1>
-  <div class="module">
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Log-in</h1>
+  <div class="card shadow-sm p-4">
     {% if form.errors %}
-      <p>Your username and password didn't match. Please try again.</p>
+      <div class="alert alert-danger" role="alert">
+        Your username and password didn't match. Please try again.
+      </div>
     {% else %}
-      <p>Please, use the following form to log-in:</p>
+      <p class="text-muted">Please, use the following form to log-in:</p>
     {% endif %}
-    <div class="login-form">
-      <form action="{% url 'login' %}" method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ next }}" />
-        <p><input type="submit" value="Log-in"></p>
-      </form>
-    </div>
+    <form action="{% url 'login' %}" method="post" class="needs-validation" novalidate>
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      <button type="submit" class="btn btn-primary w-100">Log-in</button>
+    </form>
   </div>
+</div>
 {% endblock %}
