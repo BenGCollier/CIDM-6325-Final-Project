@@ -106,7 +106,11 @@ class PortfolioEntryDetailView(LoginRequiredMixin, DetailView):
     template_name = 'students/portfolio/portfolio_detail.html'
 
     def get_queryset(self):
-        return super().get_queryset().filter(student=self.request.user)
+        user = self.request.user
+        if user.is_staff or user.groups.filter(name='Instructor').exists():
+            return super().get_queryset()
+        return super().get_queryset().filter(student=user)
+
 
 
 class PortfolioEntryListView(LoginRequiredMixin, ListView):
@@ -114,8 +118,11 @@ class PortfolioEntryListView(LoginRequiredMixin, ListView):
     template_name = 'students/portfolio/portfolio_list.html'
 
     def get_queryset(self):
+        user = self.request.user
+        if user.is_staff or user.groups.filter(name='Instructor').exists():
+            return super().get_queryset().filter(course_id=self.kwargs['course_id'])
         return super().get_queryset().filter(
-            student=self.request.user,
+            student=user,
             course_id=self.kwargs['course_id']
         )
 
