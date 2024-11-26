@@ -21,10 +21,6 @@ Aggregate model queries                     | x         |       |         |
 Django Template Language                    | x         |       |         |
 Custom template tags                        |           | x     |         |
 Custom template filters                     |           | x     |         |
-Sitemap                                     |           | x     |         |
-Site feeds                                  |           | x     |         |
-Postgres                                    |           | x     |         |
-Postgres Full-text search                   |           |       |         | x
 ***Chapter 4***                             |           |       |         |
 Django authentication framework             | x         |       |         |
 Django Admin                                | x         |       |         |
