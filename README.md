@@ -42,7 +42,7 @@ Many-to-Many Model Relationships            | x         |       |         |
 Django Forms Classes                        | x         |       |         |
 Django ModelForm Class                      | x         |       |         |
 Form data validation and retreival          | x         |       |         |
-Front-end JavaScript (see note A below)     | x         |       |         | 
+Front-end JavaScript                        | x         |       |         | 
 ***Chapter 7***                             |           |       |         |
 Advanced QuerySet operations                |           | x     |         |
 Django Signals                              |           |       | x       |
