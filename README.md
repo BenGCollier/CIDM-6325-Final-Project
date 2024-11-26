@@ -21,6 +21,7 @@ Aggregate model queries                     | x         |       |         |
 Django Template Language                    | x         |       |         |
 Custom template tags                        |           | x     |         |
 Custom template filters                     |           | x     |         |
+Postgres                                    |           | x     |         |
 ***Chapter 4***                             |           |       |         |
 Django authentication framework             | x         |       |         |
 Django Admin                                | x         |       |         |
@@ -69,4 +70,4 @@ Django Channels                             | x         |       |         |
 Web Sockets                                 | x         |       |         |
 Python/Django Async programming             | x         |       |         |
 ***Chapter 17***                            |           |       |         |
-Docker Deployment (optional)                | x         |       |         |
+Docker Deployment                           | x         |       |         |
