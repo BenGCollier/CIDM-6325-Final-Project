@@ -43,7 +43,6 @@ Django ModelForm Class                      | x         |       |         |
 Form data validation and retreival          | x         |       |         |
 Front-end JavaScript (see note A below)     | x         |       |         | 
 ***Chapter 7***                             |           |       |         |
-Activity Streams                            |           |       | x       |
 Advanced QuerySet operations                |           | x     |         |
 Django Signals                              |           |       | x       |
 Django Debug Toolbar                        | x         |       |         | 
